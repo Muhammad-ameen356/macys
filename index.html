@@ -15,12 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="icon" href="./assets/images/star.png" />
     <title>Macys</title>
   </head>
 
   <body>
     <!--! Header -->
-    <div class="container-fluid">
+    <div class="container-fluid mainContainer" id="mainContainer">
       <div class="header">
         <div class="header_left">
           We now ship to 200 locations worldwide Details
@@ -33,7 +34,10 @@
           <span class="vertical-line"></span>
           <li><a href="">weeding registry</a></li>
           <span class="vertical-line"></span>
-          <li><a href="">shipping to</a></li>
+          <li>
+            <a href="">shipping to</a>
+            <img src="./assets/images/pak-flag.png" width="20px" />
+          </li>
           <!-- <span class="vertical-line"></span>
           <li><a href="">tracking</a></li> -->
         </ul>
@@ -42,20 +46,202 @@
         <div>
           <img src="./assets/images/macys.png" alt="" width="150px" />
         </div>
-        <div>
+        <div class="searchAndBag">
           <div class="search_input">
-            <div style="position: relative">
+            <div>
               <input type="text" placeholder="Search" />
             </div>
             <div class="search_icon">
               <i class="fa fa-search" aria-hidden="true"></i>
             </div>
           </div>
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <div>
+            <img src="./assets/images/cart_bag.jpeg" alt="" width="20px" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="menu" id="menu">
+          <ul id="menu_ul">
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+              Women
+            </li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">Men</li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+              Kids & Baby
+            </li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">Home</li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+              Shoes
+            </li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+              HandBag & Accessories
+            </li>
+            <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
+              Jewelery
+            </li>
+            <li
+              onmouseover="showSubMenu()"
+              onmouseout="hideSubMenu()"
+              style="color: red"
+            >
+              Sale
+            </li>
+          </ul>
+        </div>
+        <div class="sub_menu" id="sub_menu">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <div><b>Men's Clothing</b></div>
+                <ul>
+                  <li>All Mens Clothing</li>
+                  <li>New Arrivals</li>
+                  <li>Coats & Jackets</li>
+                  <li>Dress Shirts</li>
+                  <li>Hoodies & Sweat Shirts</li>
+                  <li>Jeans</li>
+                  <li>Pajamas & Robes</li>
+                  <li>Pants</li>
+                  <li>Shirts</li>
+                  <li>Shorts</li>
+                  <li>Sweaters</li>
+                  <li>Swim wear</li>
+                  <li>Underwear & Socks</li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <div><b>Men's Active & Outdoor</b></div>
+                <ul>
+                  <li>All Activewear</li>
+                  <li>Outdoor Apparels & shoes</li>
+                  <li>Sports Fan Shop</li>
+                </ul>
+                <div><b>Men's Big & Tail</b></div>
+                <ul>
+                  <li>All Big & Tail</li>
+                  <li>Bottom</li>
+                  <li>Tops</li>
+                </ul>
+                <div><b>Men's Brands</b></div>
+                <ul>
+                  <li>All Men's Brands</li>
+                  <li>Calvin Klein</li>
+                  <li>Levi's</li>
+                  <li>Nike</li>
+                  <li>Polo Ralph Lauren</li>
+                  <li>Tommy Hilfiger</li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <div><b>Men's Shoes</b></div>
+                <ul>
+                  <li>All Men's shoes</li>
+                  <li>Athletic shoes & sneakers</li>
+                  <li>casual shoes</li>
+                  <li>dress shoes</li>
+                  <li>loafers & drivers</li>
+                  <li>sandals & flip flops</li>
+                </ul>
+                <div><b>Bag & Accessories</b></div>
+                <ul>
+                  <li>All Accessories</li>
+                  <li>Belts & suspenders</li>
+                  <li>wallets</li>
+                  <li>watches & Jewelery</li>
+                </ul>
+                <div><b>Cologne & Grooming</b></div>
+                <ul>
+                  <li>All cologine</li>
+                  <li>All grooming & skin care</li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <div><b>Shops Collections</b></div>
+                <ul>
+                  <li>Back to school</li>
+                  <li>bussiness Casual</li>
+                  <li>Contemporary Trends</li>
+                  <li>finish line mens shoes</li>
+                  <li>Diverse owned brands</li>
+                  <li>own your style</li>
+                  <li>stanley cup finals 2022</li>
+                  <li>sunglasses by sunglass hut</li>
+                  <li>wedding</li>
+                  <div class="submenu_sale">
+                    <li>Flash Sale: 50% off suits</li>
+                    <li>top rated shirts under $20</li>
+                    <li>sale & clearance</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="body">
+        <div class="row">
+          <div class="col-lg-3">adasdas</div>
+          <div class="col-lg-9">
+            <div class="body_head">
+              <p>
+                We found
+                <span style="color: rgb(228, 0, 0); font-weight: bold">
+                  1565
+                </span>
+                items you might like for <i> jeans</i>
+              </p>
+              <div class="d-flex align-items-center">
+                <p style="width: 90px" class="m-0 fw-bold">Sort By</p>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Featured Item</option>
+                  <option value="1">Price: Low to high</option>
+                  <option value="2">Price: High to low</option>
+                  <option value="3">Customers, Top Rated</option>
+                  <option value="3">Best Sellers</option>
+                  <option value="3">New Arrivals</option>
+                </select>
+              </div>
+            </div>
+            <div class="row card_div" id="complete_card">
+              <!-- <div class="col-lg-4">
+                <div class="card_img">
+                  <img src="./assets/images/img1.jpeg" alt="" />
+                </div>
+                <div class="multiple_img">
+                  <div class="multiple_img1">
+                    <img src="./assets/images/img1.jpeg" alt="" />
+                  </div>
+                  <div class="multiple_img1"></div>
+                  <div class="multiple_img1"></div>
+                </div>
+                <div class="titleAndDescription">
+                  <p>Style & Co.</p>
+                  <p>Straight-Leg Jeans, Created for Macys</p>
+                  <p>Limited-Time Special</p>
+                  <p>PKR 8,545.43</p>
+                  <p>Sale PKR 5,406.34</p>
+                  <p>Discount: 15.05%</p>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                </div>
+              </div> -->
+              <!-- <div class="col-lg-4">
+                <div class="card_img">
+                  <img src="./assets/images/img1.jpeg" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card_img">
+                  <img src="./assets/images/img1.jpeg" alt="" />
+                </div>
+              </div> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <script src="./js/app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
