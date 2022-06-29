@@ -16,11 +16,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="icon" href="./assets/images/star.png" />
-    <title>Macys</title>
+    <title>Macys || Jeans</title>
   </head>
 
-  <body>
-    <!--! Header -->
+  <body onscroll="onScrollRun()">
+    <!-- ------------------ Scroll to top button ------------------ -->
+    <div class="scrollTop_button" id="scrollTop_button">
+      <button class="" onclick="scrollToTop()">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!--! ---------------------- Header -------------------- -->
     <div class="container-fluid mainContainer" id="mainContainer">
       <div class="header">
         <div class="header_left">
@@ -38,8 +45,6 @@
             <a href="">shipping to</a>
             <img src="./assets/images/pak-flag.png" width="20px" />
           </li>
-          <!-- <span class="vertical-line"></span>
-          <li><a href="">tracking</a></li> -->
         </ul>
       </div>
       <div class="headerWithLogo">
@@ -61,6 +66,7 @@
         </div>
       </div>
       <div>
+        <!-- ------------------ Menu Item --------------- -->
         <div class="menu" id="menu">
           <ul id="menu_ul">
             <li onmouseover="showSubMenu()" onmouseout="hideSubMenu()">
@@ -89,6 +95,7 @@
             </li>
           </ul>
         </div>
+        <!-- ------------- Sub Menu -------------- -->
         <div class="sub_menu" id="sub_menu">
           <div class="container">
             <div class="row">
@@ -181,15 +188,519 @@
       </div>
       <div class="container-fluid" id="body">
         <div class="row">
-          <div class="col-lg-3">adasdas</div>
-          <div class="col-lg-9">
+          <!-- ---------------- Filter Option start ----------------- -->
+          <div class="col-lg-3 col-md-6 left_side_filter">
+            <p class="filter_head">Filter By</p>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Sales & Offers
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <div>
+                        <label class="form-check-label" for="flexCheckDefault1">
+                          Clearance/Closeout
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault1"
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for="flexCheckDefault2">
+                          Gift with Purchase
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault2"
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for="flexCheckDefault3">
+                          Last Act
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault3"
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for="flexCheckDefault4">
+                          Limited Time Special
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault4"
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for="flexCheckDefault5">
+                          Offer Code fourth
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault5"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Gender
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <div>
+                        <label class="form-check-label" for=""> Boys </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for=""> Girls </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for=""> Men </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                      <div>
+                        <label class="form-check-label" for=""> Women </label>
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Denim Fit
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFour"
+                  >
+                    Brand
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFour"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseFive"
+                  >
+                    Size
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingFive"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSix"
+                  >
+                    Color
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingSix"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSeven"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseSeven"
+                  >
+                    Discount Range
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingSeven"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEight"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseEight"
+                  >
+                    Size Range
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingEight"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingNine">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseNine"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseNine"
+                  >
+                    Price
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseNine"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingNine"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTen"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTen"
+                  >
+                    Rise
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTen"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEleven">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEleven"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseEleven"
+                  >
+                    Category
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseEleven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingEleven"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwelve">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwelve"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwelve"
+                  >
+                    Department
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwelve"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwelve"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThirteen">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThirteen"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThirteen"
+                  >
+                    Customer Ratings
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThirteen"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThirteen"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id=""
+                      />
+                      <label class="form-check-label" for=""> Default </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /////------------------- Filter Option End --------------- -->
+          <!--! ---------------------- Body Right Section -------------------- -->
+
+          <div class="col-lg-9 col-md-6 col-sm-12">
             <div class="body_head">
               <p>
                 We found
-                <span style="color: rgb(228, 0, 0); font-weight: bold">
-                  1565
+                <span
+                  style="color: rgb(228, 0, 0); font-weight: bold"
+                  id="result_count"
+                >
+                  0
                 </span>
-                items you might like for <i> jeans</i>
+                items you might like for <i> women dresses</i>
               </p>
               <div class="d-flex align-items-center">
                 <p style="width: 90px" class="m-0 fw-bold">Sort By</p>
@@ -239,6 +750,137 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!--! ---------------------- Footer Section -------------------- -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row footer_top">
+          <div class="col-lg-3">
+            <p class="footer_heading">Customer Service</p>
+            <ul>
+              <li>Help & FAQs</li>
+              <li>Order Tracking</li>
+              <li>Shipping & Delivery</li>
+              <li>Returns</li>
+              <li>Contact Us</li>
+              <li>Shipping To go to U.S. site</li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <p class="footer_heading">Our Stores</p>
+            <ul>
+              <li>Find a Store</li>
+              <li>Tell Us What You Think</li>
+              <li>Macy's Backstage</li>
+              <li>Personal Stylist</li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <p class="footer_heading">Macy's Inc.</p>
+            <ul>
+              <li>Help & FAQs</li>
+              <li>Order Tracking</li>
+              <li>Shipping & Delivery</li>
+              <li>Returns</li>
+              <li>Contact Us</li>
+              <li>Shipping To go to U.S. site</li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <p class="footer_heading">Macy's App</p>
+            <ul>
+              <li>
+                <div>
+                  <img
+                    src="./assets/images/get_appstore.png"
+                    alt=""
+                    width="100px"
+                  /><img
+                    src="./assets/images/get_playstore.png"
+                    alt=""
+                    width="100px"
+                    style="margin-left: 20px"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  style="
+                    font-size: 13px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                  "
+                >
+                  <i
+                    class="fa fa-credit-card"
+                    aria-hidden="true"
+                    style="font-size: 20px"
+                  ></i
+                  ><span style="margin-left: 10px">Apply For Card</span>
+                </div>
+              </li>
+              <li>
+                <div
+                  style="
+                    font-size: 13px;
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                  "
+                >
+                  <i
+                    class="fa fa-star-o"
+                    aria-hidden="true"
+                    style="font-size: 20px"
+                  ></i
+                  ><span style="margin-left: 10px">Star Rewards signup</span>
+                </div>
+              </li>
+              <li>
+                <div class="social_icons">
+                  <div><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                  <div>
+                    <i
+                      class="fa fa-instagram margin-left"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <div>
+                    <i class="fa fa-twitter margin-left" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <i
+                      class="fa fa-pinterest-p margin-left"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      class="fa fa-youtube-play margin-left"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer_bottom">
+      <p>
+        © 2022 Macy’s. All rights reserved. Macys.com, LLC, 151 West 34th
+        Street, New York, NY 10001. Request our corporate name & address by
+        email.
+      </p>
+      <p>
+        Privacy Notice |Cookie Preferences | Interest Based Ads | CA Privacy
+        Rights | Do Not Sell My Personal Information | Legal Notice | Customer
+        Bill of Rights | CA Transparency in Supply Chains | Product Recalls |
+        Pricing Policy
+      </p>
     </div>
 
     <script src="./js/app.js"></script>

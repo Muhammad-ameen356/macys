@@ -1,3 +1,25 @@
+/* --------- Scroll Top Top Button ----------- */
+.scrollTop_button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.scrollTop_button button {
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+  outline: none;
+  border: none;
+  background-color: rgb(133, 133, 133);
+}
+
+.scrollTop_button button i {
+  color: white;
+}
+
+/* --------- Header ----------- */
+
 .mainContainer {
   padding: 0px 50px !important;
 }
@@ -46,7 +68,8 @@
   height: 15px;
 }
 
-/* headerWithLogo */
+/* --------- Header with Logo ----------- */
+
 .headerWithLogo {
   display: flex;
   justify-content: space-between;
@@ -79,7 +102,7 @@
   align-items: center;
 }
 
-/* menu */
+/* --------- Menu ----------- */
 
 .menu {
   border-bottom: 1px solid #a4a4a4;
@@ -104,13 +127,14 @@
   border-bottom: 2px solid black;
 }
 
-/* Sub Menu */
+/* --------- Sub Menu ----------- */
 
 .sub_menu {
   display: none;
   position: fixed;
   width: 95%;
   background-color: white;
+  z-index: 10;
   animation: hideMe 1s;
 }
 
@@ -148,7 +172,7 @@
   color: red !important;
 }
 
-/* Body */
+/* --------- Body ----------- */
 
 .body_head {
   display: flex;
@@ -159,13 +183,14 @@
   padding-top: 30px;
 }
 
-/* Card */
+/* --------- Card ----------- */
 
 .card_img {
   width: 100%;
   height: 455px;
   object-fit: cover;
-  background-color: red;
+  /* background-color: red; */
+  background-image: url(../assets/images/img1.jpeg);
 }
 
 .card_img img {
@@ -214,7 +239,7 @@
 .titleAndDescription p:nth-child(3) {
   font-size: 14px;
   margin-top: 10px;
-  color: red;
+  color: #e01a2b;
 }
 
 .titleAndDescription p:nth-child(4) {
@@ -229,4 +254,128 @@
 .titleAndDescription p:nth-child(6) {
   font-size: 14px;
   margin-top: 10px;
+}
+
+/* --------- Footer Section ----------- */
+
+.footer_top {
+  padding-bottom: 100px;
+}
+
+.footer_bottom {
+  padding: 30px 50px !important;
+  border-top: 1px solid rgb(215, 215, 215);
+  background-color: #f8f8f8;
+}
+
+.footer_bottom p {
+  font-size: 12px;
+}
+
+.footer {
+  padding: 30px 50px !important;
+  margin-top: 100px;
+  background-color: #f8f8f8;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer .footer_heading {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer ul li {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.social_icons {
+  display: flex;
+  margin-top: 28px;
+}
+
+.social_icons i {
+  font-size: 22px;
+}
+
+.margin-left {
+  margin-left: 24px;
+}
+
+/* --------- Filter Left Section Body ----------- */
+
+.filter_head {
+  margin-top: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 0px;
+}
+
+/* --------- Bootstrap Accordion Customization CSS ----------- */
+
+.accordion-button:not(.collapsed) {
+  /* background-color: aqua !important; */
+  color: black !important;
+  background-color: white !important;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none !important;
+  border: none;
+}
+
+.accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  color: black !important;
+}
+
+.accordion-button {
+  font-weight: bold;
+  padding-left: 0px !important;
+}
+
+.accordion-button::after {
+  background-image: url("https://iconarchive.com/download/i89135/icons8/ios7/User-Interface-Minus.ico") !important;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("https://www.freepnglogos.com/uploads/plus-icon/plus-icon-plus-math-icon-download-icons-9.png") !important;
+}
+
+.accordion-body {
+  padding-left: 7px !important;
+  padding-top: 0px !important;
+}
+
+/* --------- Bootstrap CheckBox Customization ----------- */
+
+.form-check-input {
+  border: 1px solid black;
+  border-radius: 1px !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.form-check-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.left_side_filter label {
+  font-size: 14px;
+  opacity: 0.7;
+  text-transform: capitalize;
 }
